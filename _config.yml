@@ -1,5 +1,0 @@
-# Information about where the book exists on the web
-repository:
-  url                       : https://github.com/axsy-dev/SKU110K_CVPR19  # Online location of your book
-  path_to_book              : SKU100k1.ipynb  # Optional path to your book, relative to the repository root
-  branch                    : feature/colab  # Which branch of the repository should be used when creating links (optional)
