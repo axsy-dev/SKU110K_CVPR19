@@ -37,7 +37,7 @@ def get_session():
 #os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
 # set the modified tf session as backend in keras
-keras.backend.tensorflow_backend.set_session(get_session())
+tf.compat.v1.keras.backend.set_session(get_session())
 
 
 class load_our_config:
