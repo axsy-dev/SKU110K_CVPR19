@@ -27,9 +27,11 @@ from PIL import Image
 import tensorflow as tf
 
 def get_session():
-    config = tf.ConfigProto()
+    """ Construct a modified tf session.
+    """
+    config = tf.compat.v1.ConfigProto()
     config.gpu_options.allow_growth = True
-    return tf.Session(config=config)
+    return tf.compat.v1.Session(config=config)
 
 
 
