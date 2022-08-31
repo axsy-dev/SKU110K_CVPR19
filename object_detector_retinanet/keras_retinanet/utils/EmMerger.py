@@ -213,8 +213,8 @@ class DuplicateMerger(object):
                     continue
                 cnt_i = cnts[i]
                 cnt_j = cnts[j]
-                ct_i_to_pt_j = -cv2.pointPolygonTest(cnt_i, (mu[j][0], mu[j][1]), measureDist=True)
-                ct_j_to_pt_i = -cv2.pointPolygonTest(cnt_j, (mu[i][0], mu[i][1]), measureDist=True)
+                ct_i_to_pt_j = -cv2.pointPolygonTest(cnt_i, (int(mu[j][0]), int(mu[j][1])), measureDist=True)
+                ct_j_to_pt_i = -cv2.pointPolygonTest(cnt_j, (int(mu[i][0]), int(mu[i][1])), measureDist=True)
                 if ct_i_to_pt_j <= 0 or ct_j_to_pt_i <= 0:
                     scaled_distances[i, j] = -numpy.inf
                 else:
